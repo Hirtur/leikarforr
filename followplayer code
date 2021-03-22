@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FollowPlayer : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    public GameObject player;
+       //þetta er bara breyta eins og i python þa er þetta eins og def fallið sem þu getur kallað i ef þu þarft að nota það, og eg bjo til fall sem heitir offset og notaði það
+    private Vector3 offset = new Vector3(0, 5, -7);
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        //cameran mun vera sét á player sem er bílin okkar og kallaði á fallið offset
+        transform.position = player.transform.position + offset;
+
+             
+    }
+}
